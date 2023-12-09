@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia | Firmas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <main>
+        <div class="ContainerLogin">
+            <div class="Intro">
+                <h2>¿Cómo funciona?</h2>
+                <p>
+                    Al iniciar sesión, estás registrando tu asistencia. 
+                    Ten en cuenta que este proceso se basa en la geolocalización, 
+                    por lo que es importante que te encuentres en las proximidades 
+                    del establecimiento. Si enfrentas dificultades al intentar acceder, 
+                    te recomendamos que te comuniques con tu supervisor para recibir asistencia.
+                </p>
+            </div>
+            
+            <form action="" method="POST" class="ContainerForm">
+                <div class="HeaderForm">
+                    <h1>Sig - ned</h1>
+                </div>
+                <!--Input Usuario-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/Icon-Email.png" alt="icono email"></span>
+                    <input type="text" id="name" name="correo_firma" class="InputInsert" placeholder="Correo">                            
+                </div>
+                <!--Input Contraseña-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/Icon-Key.png" alt="icono contraseña"></span>
+                    <input type="password" id="pass" name="contrasena_firma" class="InputInsert" placeholder="Contraseña">                            
+                </div>
+                <!--Input botón login-->
+                <input type="submit" id="inputSend" class="InputSend" name="Login" value="Firmar">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

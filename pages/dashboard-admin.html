@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <title>DashBoard | Signed</title>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/tabs.js"></script>
+        <script src="../js/decimal.js"></script>
+    </head>
+<body onload="javascript:cambiarPestanna(pestanas,pestana1);">
+    <header class="headerDash">
+        <nav class="navDash">
+            <div class="logoDash">
+                <h1>Signed</h1>
+            </div>
+            <ul class="ulDash">
+                <li><a href="">Soporte</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="contenedor">
+            <div id="pestanas">
+                <ul id=lista>
+                    <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Empleados</a></li>
+                    <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Firmas</a></li>
+                    <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Nominas</a></li>
+                    <li id="pestana4"><a href='javascript:cambiarPestanna(pestanas,pestana4);'>Informes</a></li>
+                    <li id="pestana5"><a href='javascript:cambiarPestanna(pestanas,pestana5);'>Configuración</a></li>
+                </ul>
+            </div>          
+        
+            <div id="contenidopestanas">
+                <!-- PESTAÑA DE EMPLEADOS -->
+                <div id="cpestana1"  class="tabsEmpleados">
+                    <form action="" method="POST" class="">
+                            <p>Regístrar Empleado</p>                            
+                            <div class="InputsGroup">
+                              <input type="text" class="InputsForm" name="dni_empleado" placeholder="N° Documento" required>
+                            </div>
+                            <div class="InputsGroup">
+                                <input type="text" class="InputsForm"  name="nombre_empleado" placeholder="Nombre" required>
+                            </div>
+                            <div class="InputsGroup">
+                                <input type="email" class="InputsForm"  name="correo_empleado" placeholder="Correo" required>
+                            </div>
+                            <div class="InputsGroup">
+                                <input type="password" class="InputsForm" name="contrasena_empleado" placeholder="Contraseña" required>
+                            </div> 
+                            <select class="FormSelect" name="modalidad" required>
+                                <option selected>Modalidad</option>
+                                <option>Presencial</option>
+                                <option>Remoto</option>
+                                <option>Híbrido</option>
+                            </select>
+                            <select class="FormSelect" name="rol" required>
+                                <option selected>Rol</option>
+                                <option>Administrador</option>
+                                <option>Gerente</option>
+                                <option>Pasante</option>
+                                <option>Empleado</option>
+                            </select>       
+                                                
+                            <div class="contenedorGeo">
+                                <div class="contenedorSearch">
+                                    <img src="../assets/icons/Search.png" alt="">
+                                    <input type="text" class="search" id="search" placeholder="Buscar dirección + Enter para buscar" required>
+                                </div>                            
+                                <div class="contenedorResultados">
+                                    <ul id="result-list" class="list-group">
+                                    </ul>
+                                    <div class="map">
+                                        <div id="map-container"></div>
+                                    </div>
+                                </div>
+                            </div>                                     
+                            <button type="submit" class="BtnEmpleados">Registrar</button>
+                    </form>
+                    <p>Listado Empleados</p>
+                    <table class="TableEmpleados">
+                        <thead>
+                            <tr>
+                                <th scope="col">N° Documento</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Modalidad</th>
+                                <th scope="col">*</th>
+                                <th scope="col">*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope='row'> 26458609 </td>
+                                <td> jesús Montero </td>
+                                <td> Admin </td>
+                                <td> Remoto </td>
+                                <td> <a class='editar' href=''>Editar</a> </td>
+                                <td> <a class='eliminar' href=''>Eliminar</a> </td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+
+                <!-- PESTAÑA DE FIRMAS -->
+                <div id="cpestana2" class="tabsFirmas">
+                    <div class="firmas" tabindex="0">
+                        <p>Lista de firmas</p>
+                        <form action="" method="POST">
+                            <span><img src="../assets/icons/Search.png" alt=""></span>
+                            <input type="text" name="campo" id="campo" placeholder="Buscar">
+                        </form>
+                        <table class="TableFirmas">
+                            <thead>
+                                <th>N° Documento</th>
+                                <th>Nombre</th>
+                                <th>Fecha</th>
+                                <th>H. Inicio</th>
+                                <th>H. Salida</th>
+                            </thead>
+                            <tbody id="content">
+                                <!-- AQUI SE AGREGAN VALORES EN TIEMPO REAL A TRAVES DE JSON -->
+                            </tbody>
+                        </table>   
+                    </div>
+                </div>
+
+
+
+
+
+                <div id="cpestana3" class="tabsNominas">
+                    Nominas.
+                </div>
+                <div id="cpestana4" class="tabsInformes">
+                    Informes.
+                </div>
+                <div id="cpestana5" class="tabsConfig">
+                    Configuración.
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="../js/main.js"></script>
+   
+</body>
+</html>

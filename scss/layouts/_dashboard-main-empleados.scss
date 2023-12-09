@@ -1,0 +1,196 @@
+main{ 
+    .tabsEmpleados{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $bg-4;
+        form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+                margin: 3.125rem 0rem;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1.875rem;
+            }
+            .InputsGroup{
+                display: flex!important;
+                margin: .625rem;
+                .InputsForm{
+                    width: 18.75rem;
+                    height: 2.5rem;
+                    padding: .125rem .625rem;
+                    border-radius: .3125rem;
+                    border-style: none;
+                }
+            }
+            .FormSelect{
+                margin: .625rem;
+                width: 18.75rem;
+                height: 2.5rem;
+                padding: .125rem .625rem;
+                border-radius: .3125rem;
+                border-style: none;
+                option{
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: .875rem;
+                }
+            }
+            .contenedorGeo {
+                width: 100%;
+                z-index: 0;
+                .contenedorSearch {
+                    display: flex!important;
+                    justify-content: center;
+                    align-items: center;
+                    margin: .625rem;
+                    img{
+                        width: .9375rem;
+                        height: 1.25rem;
+                        margin-left: 280px;
+                        padding: 12px;
+                        position: absolute;        
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                    }
+                    img:hover{
+                        cursor: pointer;
+                    }
+                    .search {
+                        width: 18.75rem;
+                        height: 2.5rem;
+                        padding: .125rem .625rem;
+                        border-radius: .3125rem;
+                        border-style: none;
+                    }
+                }
+                .contenedorResultados {
+                    .list-group{
+                        width: 50%;
+                        margin:auto;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        background-color: #E5E7E9;
+                    }
+                    .list-group-item {
+                        margin: 0rem 0rem .3125rem .625rem;
+                        font-family: arial;
+                        color: blue;
+                        text-decoration: underline;
+                        cursor: pointer;
+                        list-style: none;
+                        border-radius: .125rem;
+                        line-height: 1.125rem;
+                        letter-spacing: .0625rem;
+                        padding: .3125rem;
+                    }                    
+                    .list-group-item:hover {
+                        text-decoration: none;
+                    }
+                    .active{
+                        color:red;
+                    }
+                    .map{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    #map-container{
+                        width: 70%;
+                        height: 50vh;
+                    }
+                    .displayNone{
+                        display: none;
+                    }
+                    .displayContent{
+                        display: block;
+                    }
+                }                  
+            }
+              
+            .BtnEmpleados{
+                margin: 1.25rem;
+                padding: .625rem 1.25rem;
+                color: $color-text-8;
+                background-color: $bg-1;
+                border-style: none;
+                border-radius: 5px;
+                font-family: 'Tajawal', sans-serif;
+                font-size: 1rem;
+            }
+            .BtnEmpleados:hover{
+                cursor: pointer;
+                background-color: $bg-2;
+            }
+        }
+        p{
+            margin: 3.125rem 0rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.875rem;
+        }
+        .TableEmpleados{
+            width: 80%;
+            margin-bottom: 80px;
+            border-collapse: collapse;
+            border: 1px solid $bg-8;
+            thead{
+                th{
+                    font-family: 'Tajawal', sans-serif;
+                    font-size: 1.125rem;
+                    color: $color-text-8;
+                    background-color: $bg-1;
+                    padding: .3125rem;
+                    border: 1px solid $bg-8;
+                }
+            }
+            tbody{
+                td{
+                    padding: .3125rem;
+                    font-family: 'Tajawal', sans-serif;
+                    font-size: 1.125rem;
+                    text-align: center;
+                    color: $color-text-8;
+                    background-color: $bg-3;
+                    border: 1px solid $bg-8;
+                    .editar{
+                        color: green;
+                    }
+                    .eliminar{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+  }
+  
+  .contenedorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: cadetblue;
+  }
+  
+  .logo h1 {
+    font-family: arial;
+    font-size: 25px;
+    color: white;
+  }
+  
+  nav ul li {
+    font-family: arial;
+    list-style: none;
+    color: white;
+  }
+  

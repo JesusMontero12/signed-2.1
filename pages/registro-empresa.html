@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia | Firmas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <main>
+        <div class="ContainerRegister">
+            <div class="Intro">
+                <h2>¿Cómo funciona?</h2>
+                <p>  
+                    Ingresa la información requerida para acceder al panel de control, 
+                    seleccionar el plan de tu elección y configurar los detalles de tu empresa.
+                </p>
+            </div>
+            
+            <form action="" method="POST" class="ContainerForm">
+                <div class="HeaderForm">
+                    <h1>Sig - ned</h1>
+                </div>
+
+
+                <!--Input nombre de la empresa-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/Icon-Priv.png" alt="icono privado"></span>
+                    <input type="text" id="name" name="nombre_empresa" class="InputInsert" placeholder="Nombre de la empresa" required>                            
+                </div>
+
+                <!--Input Teléfono-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/phone.png" alt="icono teléfono"></span>
+                    <input type="text" id="telefono" name="telefono_empresa"  class="InputInsert" placeholder="Teléfono" required>            
+                </div>
+
+                <!--Input Correo-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/Icon-Email.png" alt="icono email"></span>
+                    <input type="email" id="correo" name="correo_empresa" class="InputInsert" placeholder="Correo" required>                            
+                </div>
+                <br>
+                <!--Input DNI Administrador-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/Icon-Priv.png" alt="icono privado"></span>
+                    <input type="text" id="dni_admin" name="dni_admin" class="InputInsert" placeholder="N° documento admin..." required>                            
+                </div>
+
+                <!--Input Administrador-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/Icon-User.png" alt="icono usuario"></span>
+                    <input type="text" id="administrador" name="administrador_empresa" class="InputInsert" placeholder="Administrador" required>                            
+                </div>
+                <!--Input Contraseña-->
+                <div class="InputsForm">
+                    <span><img src="../assets/icons/Icon-Key.png" alt="icono contraseña"></span>
+                    <input type="password" id="pass" name="contrasena_empresa" class="InputInsert" placeholder="Contraseña" required>                            
+                </div>
+                <!--Input Botón Registrar-->
+                <input type="submit" id="inputSend" class="InputSend" name="registrar" value="Registrar">
+                <a href="./login.html" class="linklogin">¿Ya estas registrado?</a>
+            </form>
+
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+CREATE DATABASE signed;
+USE signed;
+
+
+
+
+
+CREATE TABLE usuario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    dni VARCHAR(15) NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    contraseña VARCHAR(100) NOT NULL,
+    rol VARCHAR(20) NOT NULL,
+    modalidad VARCHAR(20) NOT NULL,
+    fechaReg TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fechaUpdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+
+
+CREATE TABLE firmas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    dni VARCHAR(15) NOT NULL,
+    fecha DATE NOT NULL,
+    hora_inicio TIME NOT NULL,
+    hora_salida TIME NOT NULL,
+    FOREIGN KEY (dni) REFERENCES usuario(dni)
+);
+ALTER TABLE firmas
+ADD INDEX fk_usuario_idx (dni);
+
+
+
+
+
+
+CREATE TABLE coordenadas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    dni VARCHAR(15) NOT NULL,
+    direccion VARCHAR(100) NOT NULL,
+    latitud DECIMAL(10, 8) NOT NULL,
+    longitud DECIMAL(11, 8) NOT NULL,
+    FOREIGN KEY (dni) REFERENCES usuario(dni)
+);
+ALTER TABLE coordenadas
+ADD INDEX fk_usuario_idx (dni);
+
+
+
+
+
+
+CREATE TABLE rol (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    rol_empleado VARCHAR(50) NOT NULL
+);
+
+INSERT INTO rol (rol_empleado) VALUES 
+    ('Administrador'),
+    ('Gerente'),
+    ('Pasante'),
+    ('Empleado');
+
+
+
+
+    CREATE TABLE modalidad (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    modalidad_empleado VARCHAR(50) NOT NULL
+);
+
+INSERT INTO modalidad (modalidad_empleado) VALUES 
+    ('Presencial'),
+    ('Remoto'),
+    ('Híbrido');
+
+
+
+
+CREATE TABLE datos_empresa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    telefono VARCHAR(15) NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    dni_administrador VARCHAR(15) NOT NULL,
+    administrador VARCHAR(50) NOT NULL,
+    contraseña VARCHAR(100) NOT NULL,
+    fechaReg TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FechaUpdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE nomina (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    empleado_id INT,
+    fecha_pago DATE NOT NULL,
+    salario_base DECIMAL(10, 2) NOT NULL,
+    horas_trabajadas INT,
+    deducciones DECIMAL(10, 2) DEFAULT 0,
+    bonificaciones DECIMAL(10, 2) DEFAULT 0,
+    total_pago DECIMAL(10, 2),
+    FOREIGN KEY (empleado_id) REFERENCES datos_empresa(id)
+);
