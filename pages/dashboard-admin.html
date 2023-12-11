@@ -9,10 +9,10 @@
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script type="text/javascript" src="../js/tabs.js"></script>
         <script src="../js/decimal.js"></script>
+        <script src="../js/modal-config.js"></script>
     </head>
-<body onload="javascript:cambiarPestanna(pestanas,pestana1);">
+<body onload="javascript:modalconfig(false);">
     <header class="headerDash">
         <nav class="navDash">
             <div class="logoDash">
@@ -27,62 +27,63 @@
         </nav>
     </header>
     <main>
-        <div class="contenedor">
-            <div id="pestanas">
-                <ul id=lista>
-                    <li id="pestana1"><a href='javascript:cambiarPestanna(pestanas,pestana1);'>Empleados</a></li>
-                    <li id="pestana2"><a href='javascript:cambiarPestanna(pestanas,pestana2);'>Firmas</a></li>
-                    <li id="pestana3"><a href='javascript:cambiarPestanna(pestanas,pestana3);'>Nominas</a></li>
-                    <li id="pestana4"><a href='javascript:cambiarPestanna(pestanas,pestana4);'>Informes</a></li>
-                    <li id="pestana5"><a href='javascript:cambiarPestanna(pestanas,pestana5);'>Configuración</a></li>
-                </ul>
-            </div>          
-        
-            <div id="contenidopestanas">
-                <!-- PESTAÑA DE EMPLEADOS -->
-                <div id="cpestana1"  class="tabsEmpleados">
+        <div id="modal"></div>
+        <div class="mainTabs">
+            <div class="tabs">
+                <button class="tab active">Empleados</button>
+                <button class="tab">Firmas</button>
+                <button class="tab">Nominas</button>
+                <button class="tab">Informes</button>
+                <button class="tab">Configuración</button>
+                <div class="line"></div>
+            </div>
+            <div class="tab-content">
+                <!-- PESTAÑA EMPLEADO -->
+                <div class="content active">
                     <form action="" method="POST" class="">
-                            <p>Regístrar Empleado</p>                            
-                            <div class="InputsGroup">
-                              <input type="text" class="InputsForm" name="dni_empleado" placeholder="N° Documento" required>
-                            </div>
-                            <div class="InputsGroup">
-                                <input type="text" class="InputsForm"  name="nombre_empleado" placeholder="Nombre" required>
-                            </div>
-                            <div class="InputsGroup">
-                                <input type="email" class="InputsForm"  name="correo_empleado" placeholder="Correo" required>
-                            </div>
-                            <div class="InputsGroup">
-                                <input type="password" class="InputsForm" name="contrasena_empleado" placeholder="Contraseña" required>
-                            </div> 
-                            <select class="FormSelect" name="modalidad" required>
-                                <option selected>Modalidad</option>
-                                <option>Presencial</option>
-                                <option>Remoto</option>
-                                <option>Híbrido</option>
-                            </select>
-                            <select class="FormSelect" name="rol" required>
-                                <option selected>Rol</option>
-                                <option>Administrador</option>
-                                <option>Gerente</option>
-                                <option>Pasante</option>
-                                <option>Empleado</option>
-                            </select>       
-                                                
-                            <div class="contenedorGeo">
-                                <div class="contenedorSearch">
-                                    <img src="../assets/icons/Search.png" alt="">
-                                    <input type="text" class="search" id="search" placeholder="Buscar dirección + Enter para buscar" required>
-                                </div>                            
-                                <div class="contenedorResultados">
-                                    <ul id="result-list" class="list-group">
-                                    </ul>
-                                    <div class="map">
-                                        <div id="map-container"></div>
-                                    </div>
+                        <p>Regístrar Empleado</p>                            
+                        <div class="InputsGroup">
+                          <input type="text" class="InputsForm" name="dni_empleado" placeholder="N° Documento" required>
+                        </div>
+                        <div class="InputsGroup">
+                            <input type="text" class="InputsForm"  name="nombre_empleado" placeholder="Nombre" required>
+                        </div>
+                        <div class="InputsGroup">
+                            <input type="email" class="InputsForm"  name="correo_empleado" placeholder="Correo" required>
+                        </div>
+                        <div class="InputsGroup">
+                            <input type="password" class="InputsForm" name="contrasena_empleado" placeholder="Contraseña" required>
+                        </div> 
+                        <select class="FormSelect" name="modalidad" required>
+                            <option selected>Modalidad</option>
+                            <option>Presencial</option>
+                            <option>Remoto</option>
+                            <option>Híbrido</option>
+                        </select>
+                        <select class="FormSelect" name="rol" required>
+                            <option selected>Rol</option>
+                            <option>Administrador</option>
+                            <option>Gerente</option>
+                            <option>Pasante</option>
+                            <option>Empleado</option>
+                        </select>       
+                        <div class="InputsGroup">
+                            <input type="text" class="InputsForm"  name="sueldo_empleado" placeholder="Sueldo liquido del empleado" required>
+                        </div>         
+                        <div class="contenedorGeo">
+                            <div class="contenedorSearch">
+                                <img src="../assets/icons/Search.png" id="BtnSearch" alt="">
+                                <input type="text" class="search" id="search" placeholder='Buscar dirección "Click en boton para buscar"' required>
+                            </div>                            
+                            <div class="contenedorResultados">
+                                <ul id="result-list" class="list-group">
+                                </ul>
+                                <div class="map">
+                                    <div id="map-container"></div>
                                 </div>
-                            </div>                                     
-                            <button type="submit" class="BtnEmpleados">Registrar</button>
+                            </div>
+                        </div>                                     
+                        <button type="submit" class="BtnEmpleados">Registrar</button>
                     </form>
                     <p>Listado Empleados</p>
                     <table class="TableEmpleados">
@@ -90,8 +91,11 @@
                             <tr>
                                 <th scope="col">N° Documento</th>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Rol</th>
+                                <th scope="col">Correo</th>
                                 <th scope="col">Modalidad</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Sueldo</th>
                                 <th scope="col">*</th>
                                 <th scope="col">*</th>
                             </tr>
@@ -100,8 +104,11 @@
                             <tr>
                                 <td scope='row'> 26458609 </td>
                                 <td> jesús Montero </td>
-                                <td> Admin </td>
+                                <td> jesusmonteropc@gmail.com </td>
                                 <td> Remoto </td>
+                                <td> Admin </td>
+                                <td> Goycolea 1188 </td>
+                                <td> 450.000 </td>
                                 <td> <a class='editar' href=''>Editar</a> </td>
                                 <td> <a class='eliminar' href=''>Eliminar</a> </td>
                             </tr>
@@ -109,12 +116,12 @@
                     </table> 
                 </div>
 
-                <!-- PESTAÑA DE FIRMAS -->
-                <div id="cpestana2" class="tabsFirmas">
-                    <div class="firmas" tabindex="0">
+                <!-- PESTAÑA FIRMAS -->
+                <div class="content">
+                    <div class="firmas">
                         <p>Lista de firmas</p>
                         <form action="" method="POST">
-                            <span><img src="../assets/icons/Search.png" alt=""></span>
+                            <img src="../assets/icons/Search.png" alt="">
                             <input type="text" name="campo" id="campo" placeholder="Buscar">
                         </form>
                         <table class="TableFirmas">
@@ -127,29 +134,91 @@
                             </thead>
                             <tbody id="content">
                                 <!-- AQUI SE AGREGAN VALORES EN TIEMPO REAL A TRAVES DE JSON -->
+                                <!-- estos datos seran temporal -->
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
+                                <tr>
+                                    <td scope='row'> 26458609 </td>
+                                    <td> jesús Montero </td>
+                                    <td> 11-12-2023 </td>
+                                    <td> 09:00 </td>
+                                    <td> 17:15 </td>
+                                </tr>
                             </tbody>
                         </table>   
                     </div>
                 </div>
 
-
-
-
-
-                <div id="cpestana3" class="tabsNominas">
-                    Nominas.
+                <!-- PESTAÑA NOMINA -->
+                <div class="content">
+                    <h2>Nomina</h2>
                 </div>
-                <div id="cpestana4" class="tabsInformes">
-                    Informes.
+                <!-- PESTAÑA INFORMES -->
+                <div class="content">
+                    <h2>Informes</h2>
                 </div>
-                <div id="cpestana5" class="tabsConfig">
-                    Configuración.
+                <!-- PESTAÑA CONFIGURACION -->
+                <div class="content">
+                    <h2>Configuracion</h2>
                 </div>
             </div>
         </div>
     </main>
-    
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -160,6 +229,6 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
     <script src="../js/main.js"></script>
-   
+    <script src="../js/tabs.js"></script>
 </body>
 </html>

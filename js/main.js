@@ -9,10 +9,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
  
         
-document.getElementById("search").addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      getData()
-    }
+document.getElementById("BtnSearch").addEventListener('click', (event) => {
+      getData();
 });
 
 

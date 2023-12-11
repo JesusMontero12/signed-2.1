@@ -1,27 +1,25 @@
 main{
-    .tabsFirmas{
-        
+    .content{
         .firmas{
-            display: flex!important;
+            width: 100%;
+            display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             p{
-                margin: 3.125rem 0rem;
+                color: $color-text-3;
+                text-align: center;
                 font-family: 'Open Sans', sans-serif;
                 font-size: 1.875rem;
             }
             form{
-                width: 80%;
+                width: 45%;
                 margin-bottom: 10px;
-                span{
                     img{
                         width: 20px;
                         height: 20px;
-                        margin: 5px;
                         position: absolute;
+                        margin-left: -300px;
                     }
-                }
+                
                 input{
                     width: 18.75rem;
                     height: 1.875rem;
@@ -31,6 +29,7 @@ main{
             
             .TableFirmas{
                 width: 80%;
+                margin: auto;
                 margin-bottom: 80px;
                 border-collapse: collapse;
                 border: 1px solid $bg-8;
@@ -38,10 +37,10 @@ main{
                     th{
                         font-family: 'Tajawal', sans-serif;
                         font-size: 1.125rem;
-                        color: $color-text-7;
-                        background-color: $bg-8;
+                        color: $color-text-8;
+                        background-color: $bg-1;
                         padding: .3125rem;
-                        border: 1px solid $bg-7;
+                        border: 1px solid $bg-8;
                     }
                 }
                 tbody{
@@ -50,9 +49,15 @@ main{
                         font-family: 'Tajawal', sans-serif;
                         font-size: 1.125rem;
                         text-align: center;
-                        color: $color-text-7;
-                        background-color: $bg-4;
-                        border: 1px solid $bg-7;
+                        color: $color-text-8;
+                        background-color: $bg-3;
+                        border: 1px solid $bg-8;
+                        .editar{
+                            color: green;
+                        }
+                        .eliminar{
+                            color: red;
+                        }
                     }
                 }
             }

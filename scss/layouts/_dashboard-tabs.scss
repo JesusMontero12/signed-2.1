@@ -1,28 +1,59 @@
 main{
-    .contenedor{
-        #pestanas{
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.125rem;
-            li{
-                list-style-type: none;
-                float: left;
-                text-align: center;
-                margin: 0rem 0rem -0.125rem 0rem;
-                border-top-left-radius: .3125rem;
+    .mainTabs{
+        width: 100%;
+        .tabs{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            position: relative;            
+            .tab{
+                padding: 1.25rem;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $color-text-3;
+                background: none;
+                border-style: none;
+                border: none;
                 border-top-right-radius: .3125rem;
-                border: 1px solid $bg-4;
-                border-bottom: $bg-4;
-                padding: .9375rem 0rem;
-                a:link{
-                    text-decoration: none;
-                    color: $color-text-1;
-                    padding: .9375rem 1.875rem;
-                }
+                border-top-left-radius: .3125rem;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .tab:not(.active):hover{
+                color: $color-text-1;
+            }
+            .tab.active{
+                color: $color-text-6;
+            }
+            .tab:hover{
+                color: $color-text-4;
+            }
+            .line{
+                position: absolute;
+                width: 6.25rem;
+                height: .125rem;
+                background-color: $bg-6;
+                top: 3.875rem;
+                left: 10px;
+                transition: all 0.3s ease-in-out;
             }
         }
-        #contenidopestanas{
-            clear: both;  
-            background: $bg-4;
+    }
+    .tab-content{
+        .content{
+            display: none;
+            padding: 50px;
+            background-color: $bg-4;
+            min-height: 70vh;
+        }
+        .content.active{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
