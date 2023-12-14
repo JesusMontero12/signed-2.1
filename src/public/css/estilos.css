@@ -494,38 +494,31 @@ footer .copyright a:hover {
   background-color: #000b45;
 }
 
-main .tabsEmpleados {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #D9D9D9;
-}
-main .tabsEmpleados form {
+main .content form {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main .tabsEmpleados form p {
-  margin: 3.125rem 0rem;
+main .content form p {
+  margin-top: 10px;
+  color: #454545;
   font-family: "Open Sans", sans-serif;
   font-size: 1.875rem;
 }
-main .tabsEmpleados form .InputsGroup {
+main .content form .InputsGroup {
   display: flex !important;
   margin: 0.625rem;
 }
-main .tabsEmpleados form .InputsGroup .InputsForm {
+main .content form .InputsGroup .InputsForm {
   width: 18.75rem;
   height: 2.5rem;
   padding: 0.125rem 0.625rem;
   border-radius: 0.3125rem;
   border-style: none;
 }
-main .tabsEmpleados form .FormSelect {
+main .content form .FormSelect {
   margin: 0.625rem;
   width: 18.75rem;
   height: 2.5rem;
@@ -533,21 +526,21 @@ main .tabsEmpleados form .FormSelect {
   border-radius: 0.3125rem;
   border-style: none;
 }
-main .tabsEmpleados form .FormSelect option {
+main .content form .FormSelect option {
   font-family: "Open Sans", sans-serif;
   font-size: 0.875rem;
 }
-main .tabsEmpleados form .contenedorGeo {
+main .content form .contenedorGeo {
   width: 100%;
   z-index: 0;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorSearch {
+main .content form .contenedorGeo .contenedorSearch {
   display: flex !important;
   justify-content: center;
   align-items: center;
   margin: 0.625rem;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorSearch img {
+main .content form .contenedorGeo .contenedorSearch img {
   width: 0.9375rem;
   height: 1.25rem;
   margin-left: 280px;
@@ -556,24 +549,24 @@ main .tabsEmpleados form .contenedorGeo .contenedorSearch img {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorSearch img:hover {
+main .content form .contenedorGeo .contenedorSearch img:hover {
   cursor: pointer;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorSearch .search {
+main .content form .contenedorGeo .contenedorSearch .search {
   width: 18.75rem;
   height: 2.5rem;
   padding: 0.125rem 0.625rem;
   border-radius: 0.3125rem;
   border-style: none;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados .list-group {
+main .content form .contenedorGeo .contenedorResultados .list-group {
   width: 50%;
   margin: auto;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #E5E7E9;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados .list-group-item {
+main .content form .contenedorGeo .contenedorResultados .list-group-item {
   margin: 0rem 0rem 0.3125rem 0.625rem;
   font-family: arial;
   color: blue;
@@ -585,28 +578,28 @@ main .tabsEmpleados form .contenedorGeo .contenedorResultados .list-group-item {
   letter-spacing: 0.0625rem;
   padding: 0.3125rem;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados .list-group-item:hover {
+main .content form .contenedorGeo .contenedorResultados .list-group-item:hover {
   text-decoration: none;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados .active {
+main .content form .contenedorGeo .contenedorResultados .active {
   color: red;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados .map {
+main .content form .contenedorGeo .contenedorResultados .map {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados #map-container {
+main .content form .contenedorGeo .contenedorResultados #map-container {
   width: 70%;
   height: 50vh;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados .displayNone {
+main .content form .contenedorGeo .contenedorResultados .displayNone {
   display: none;
 }
-main .tabsEmpleados form .contenedorGeo .contenedorResultados .displayContent {
+main .content form .contenedorGeo .contenedorResultados .displayContent {
   display: block;
 }
-main .tabsEmpleados form .BtnEmpleados {
+main .content form .BtnEmpleados {
   margin: 1.25rem;
   padding: 0.625rem 1.25rem;
   color: #ffffff;
@@ -616,22 +609,23 @@ main .tabsEmpleados form .BtnEmpleados {
   font-family: "Tajawal", sans-serif;
   font-size: 1rem;
 }
-main .tabsEmpleados form .BtnEmpleados:hover {
+main .content form .BtnEmpleados:hover {
   cursor: pointer;
   background-color: #212529;
 }
-main .tabsEmpleados p {
+main .content p {
   margin: 3.125rem 0rem;
+  color: #454545;
   font-family: "Open Sans", sans-serif;
   font-size: 1.875rem;
 }
-main .tabsEmpleados .TableEmpleados {
+main .content .TableEmpleados {
   width: 80%;
   margin-bottom: 80px;
   border-collapse: collapse;
   border: 1px solid #ffffff;
 }
-main .tabsEmpleados .TableEmpleados thead th {
+main .content .TableEmpleados thead th {
   font-family: "Tajawal", sans-serif;
   font-size: 1.125rem;
   color: #ffffff;
@@ -639,7 +633,7 @@ main .tabsEmpleados .TableEmpleados thead th {
   padding: 0.3125rem;
   border: 1px solid #ffffff;
 }
-main .tabsEmpleados .TableEmpleados tbody td {
+main .content .TableEmpleados tbody td {
   padding: 0.3125rem;
   font-family: "Tajawal", sans-serif;
   font-size: 1.125rem;
@@ -648,10 +642,10 @@ main .tabsEmpleados .TableEmpleados tbody td {
   background-color: #454545;
   border: 1px solid #ffffff;
 }
-main .tabsEmpleados .TableEmpleados tbody td .editar {
+main .content .TableEmpleados tbody td .editar {
   color: green;
 }
-main .tabsEmpleados .TableEmpleados tbody td .eliminar {
+main .content .TableEmpleados tbody td .eliminar {
   color: red;
 }
 
@@ -681,79 +675,117 @@ nav ul li {
   color: white;
 }
 
-main .tabsFirmas .firmas {
-  display: flex !important;
+main .content .firmas {
+  width: 100%;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
-main .tabsFirmas .firmas p {
-  margin: 3.125rem 0rem;
+main .content .firmas p {
+  color: #454545;
+  text-align: center;
   font-family: "Open Sans", sans-serif;
   font-size: 1.875rem;
 }
-main .tabsFirmas .firmas form {
-  width: 80%;
+main .content .firmas form {
+  width: 45%;
   margin-bottom: 10px;
 }
-main .tabsFirmas .firmas form span img {
+main .content .firmas form img {
   width: 20px;
   height: 20px;
-  margin: 5px;
   position: absolute;
+  margin-left: -300px;
 }
-main .tabsFirmas .firmas form input {
+main .content .firmas form input {
   width: 18.75rem;
   height: 1.875rem;
   padding-left: 30px;
 }
-main .tabsFirmas .firmas .TableFirmas {
+main .content .firmas .TableFirmas {
   width: 80%;
+  margin: auto;
   margin-bottom: 80px;
   border-collapse: collapse;
   border: 1px solid #ffffff;
 }
-main .tabsFirmas .firmas .TableFirmas thead th {
+main .content .firmas .TableFirmas thead th {
   font-family: "Tajawal", sans-serif;
   font-size: 1.125rem;
-  color: #FFE6C7;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
   padding: 0.3125rem;
-  border: 1px solid #FFE6C7;
+  border: 1px solid #ffffff;
 }
-main .tabsFirmas .firmas .TableFirmas tbody td {
+main .content .firmas .TableFirmas tbody td {
   padding: 0.3125rem;
   font-family: "Tajawal", sans-serif;
   font-size: 1.125rem;
   text-align: center;
-  color: #FFE6C7;
-  background-color: #D9D9D9;
-  border: 1px solid #FFE6C7;
+  color: #ffffff;
+  background-color: #454545;
+  border: 1px solid #ffffff;
+}
+main .content .firmas .TableFirmas tbody td .editar {
+  color: green;
+}
+main .content .firmas .TableFirmas tbody td .eliminar {
+  color: red;
 }
 
-main .contenedor #pestanas {
+main .mainTabs {
+  width: 100%;
+}
+main .mainTabs .tabs {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  position: relative;
+}
+main .mainTabs .tabs .tab {
+  padding: 1.25rem;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.125rem;
-}
-main .contenedor #pestanas li {
-  list-style-type: none;
-  float: left;
-  text-align: center;
-  margin: 0rem 0rem -0.125rem 0rem;
-  border-top-left-radius: 0.3125rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #454545;
+  background: none;
+  border-style: none;
+  border: none;
   border-top-right-radius: 0.3125rem;
-  border: 1px solid #D9D9D9;
-  border-bottom: #D9D9D9;
-  padding: 0.9375rem 0rem;
+  border-top-left-radius: 0.3125rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
-main .contenedor #pestanas li a:link {
-  text-decoration: none;
+main .mainTabs .tabs .tab:not(.active):hover {
   color: #000000;
-  padding: 0.9375rem 1.875rem;
 }
-main .contenedor #contenidopestanas {
-  clear: both;
-  background: #D9D9D9;
+main .mainTabs .tabs .tab.active {
+  color: #000080;
+}
+main .mainTabs .tabs .tab:hover {
+  color: #D9D9D9;
+}
+main .mainTabs .tabs .line {
+  position: absolute;
+  width: 6.25rem;
+  height: 0.125rem;
+  background-color: #000080;
+  top: 3.875rem;
+  left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+main .tab-content .content {
+  display: none;
+  padding: 50px;
+  background-color: #D9D9D9;
+  min-height: 70vh;
+}
+main .tab-content .content.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*------Enlaces Responsive Carpeta layout/media-----*/
