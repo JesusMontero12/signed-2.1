@@ -1,11 +1,33 @@
 {
-  "name": "signed",
+  "name": "signed-2.1",
   "version": "1.0.0",
-  "description": "",
+  "description": "Signed",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesusMontero12/signed-2.1.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesusMontero12/signed-2.1/issues"
+  },
+  "homepage": "https://github.com/JesusMontero12/signed-2.1#readme",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-handlebars": "^7.1.2",
+    "express-validator": "^7.0.1",
+    "mongoose": "^8.0.3",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "nodemon": "^3.0.2"
+  }
 }
