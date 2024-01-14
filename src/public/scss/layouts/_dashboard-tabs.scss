@@ -33,11 +33,11 @@ main{
             }
             .line{
                 position: absolute;
-                width: 6.25rem;
+                width: 120px;
                 height: .125rem;
                 background-color: $bg-6;
                 top: 3.875rem;
-                left: 10px;
+                left: -8px;
                 transition: all 0.3s ease-in-out;
             }
         }
@@ -45,15 +45,13 @@ main{
     .tab-content{
         .content{
             display: none;
-            padding: 50px;
-            background-color: $bg-4;
-            min-height: 70vh;
         }
         .content.active{
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            min-height: 70vh;
+            background-color: #e5e7ea;
         }
     }
 }

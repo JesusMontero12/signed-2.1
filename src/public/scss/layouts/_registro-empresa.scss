@@ -8,7 +8,7 @@
     .Intro{
         width: 60%;
         margin: 0rem .3125rem 0rem 6.25rem;
-        color: $color-text-7;
+        color: $color-text-8;
         h2{
             margin: .625rem;
             padding: .625rem;
@@ -36,7 +36,7 @@
             h1{
                 font-family: 'Fuggles';
                 font-size: 3.75rem;
-                color: $color-text-7;
+                color: $color-text-8;
             }
         }
         .InputsForm{
@@ -63,13 +63,13 @@
         }
         .InputSend{
             width: 18.75rem;/*300px*/
-            padding: .625rem;/*10px*/
+            padding: .625rem 1.25rem;/*10px 20px*/
             margin: .625rem auto;/*10px auto*/
             font-family: Verdana, sans-serif;
             font-size: 1rem;/*16px*/
-            color: $color-text-7;
+            color: $color-text-8;
             background-color: $bg-1;
-            border-radius: .125rem;/*2px*/
+            border-radius: .3125rem;/*5px*/
             border-style: none;
         }
         .InputSend:hover{
@@ -77,7 +77,7 @@
             background-color: $bg-2;
         }
         .linklogin{
-            color: $color-text-7;            
+            color: $color-text-8;            
             font-family: 'Open Sans', sans-serif;
         }
         .linklogin:hover{

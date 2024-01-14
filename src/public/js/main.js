@@ -33,7 +33,7 @@ function setResultList(parsedResult) {
   for (const marker of currentMarkers) {
     map.removeLayer(marker);
   }
-  map.flyTo(new L.LatLng(-33.4482920, -70.6559841), 12);
+  map.flyTo(new L.LatLng(-33.4482920, -70.6559841), 8);
   for (const result of parsedResult) {
     const li = document.createElement('li');
     li.classList.add('list-group-item', 'list-group-item-action');
@@ -126,4 +126,55 @@ function setResultList(parsedResult) {
   }
 }
 
+function habilitarInputs(cant, monto, btns){
+  let input = document.getElementById(monto);
+  let cantidad = document.getElementById(cant);
+  let btn = document.getElementById(btns);
 
+  if(input.disabled == false){
+      input.disabled = true;
+      input.classList.remove('inputSelect');
+      cantidad.disabled = true;
+      cantidad.classList.remove('inputSelect');
+      btn.value = "Modificar";
+  } else {
+      input.disabled = false;
+      input.classList.add('inputSelect');
+      cantidad.disabled = false;
+      cantidad.classList.add('inputSelect');
+      btn.value = "Listo";
+  }
+}
+
+//nav del tab informes desplega sub menus
+let elementLists = document.querySelectorAll('.btnDesplegar');
+
+elementLists.forEach(elementList => {
+  elementList.addEventListener('click', () => {
+    let height = 0;
+    let menu = elementList.nextElementSibling;
+    if(menu.clientHeight == "0"){
+      height = menu.scrollHeight;
+    }
+
+    menu.style.height = `${height}px`;
+  })
+});
+
+
+//tabconfiguracion desplega sub menus
+let elementConfigs = document.querySelectorAll('.btnDesplegarConfig');
+
+elementConfigs.forEach(elementConfig => {
+  elementConfig.addEventListener('click', () =>{
+
+    elementConfig.classList.toggle('arrow');
+
+    let height = 0;
+    let menu = elementConfig.nextElementSibling;
+    if(menu.clientHeight == "0"){
+      height = menu.scrollHeight;
+    }
+    menu.style.height = `${height}px`;
+  })
+});

@@ -1,193 +1,336 @@
 main{ 
     //esta clase pertenece al archivo dashboard-tabs.scss
     .content{
-        form{
+        .empleados{            
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: .625rem;
+            .containerShowInfo{
+                .cardsShow{
+                    display: flex;
+                    justify-content: center;
+                    .cardShowinfo1{
+                        margin: 1.25rem;
+                        width: 18.75rem;
+                        height: 5rem;
+                        background-color: #00b800;
+                        border-radius: .25rem;
+                        box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+                        p{
+                            margin: .3125rem 0rem .5rem .625rem;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            color: $color-text-8;
+                        }
+                        span{
+                            margin-left: 16.25rem;
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 1.875rem;
+                            color: $color-text-8;
+                        }
+                    }
+                    .cardShowinfo2{
+                        margin: 1.25rem;
+                        width: 18.75rem;
+                        height: 5rem;                        
+                        background-color: $bg-6;
+                        border-radius: .25rem;
+                        box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+                        p{
+                            margin: .3125rem 0rem .5rem .625rem;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            color: $color-text-8;
+                        }
+                        span{
+                            margin-left: 260px;
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 1.875rem;
+                            color: $color-text-8;
+                        }
+                    }
+                    .cardShowinfo3{
+                        margin: 1.25rem;
+                        width: 18.75rem;
+                        height: 5rem;
+                        background-color: $bg-3;
+                        border-radius: .25rem;
+                        box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+                        p{
+                            margin: .3125rem 0rem .5rem .625rem;
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            color: $color-text-8;
+                        }
+                        span{
+                            margin-left: 16.25rem;
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: 1.875rem;
+                            color: $color-text-8;
+                        }
+                    }
+                }
+                
+            }
             p{
-                margin-top: 10px;
-                color: $color-text-3;
+                margin: .9375rem 0rem 1rem 0rem;
                 font-family: 'Open Sans', sans-serif;
                 font-size: 1.875rem;
+                color: $color-text-6;
             }
-            .InputsGroup{
-                display: flex!important;
-                margin: .625rem;
-                .InputsForm{
+            .cardTableEmpleados{
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                height: 50vh;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                background-color: $bg-8;
+                border-radius: .625rem;
+                box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+                .TableEmpleados{
+                    width: 100%;
+                    border: 1px solid $bg-8;
+                    border-radius: .3125rem;                    
+                    thead{
+                        tr{
+                            th{
+                                margin-left: 50px;
+                                padding: .3125rem;
+                                font-family: 'Tajawal', sans-serif;
+                                font-size: 1.125rem;
+                                text-align: left;
+                                color: $color-text-6;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            .name{
+                                display: flex;
+                                align-items: center;
+                                padding: 35px 0px;
+                                border: 1px solid $bg-8;
+                                img{
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    margin-left: .625rem;
+                                }
+                                .textName{
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-left: .625rem;
+                                    p{
+                                        margin: 0;
+                                        padding: 0;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-size: 1rem;
+                                        color: $color-text-1;
+                                    }
+                                    span{
+                                        margin: 0;
+                                        padding: 0;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-size: .75rem;
+                                        color: $color-text-3;
+                                    }
+                                }
+                            }
+                            .contact{
+                                .textName{
+                                    p{
+                                        margin: 0;
+                                        padding: 0;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-size: 1rem;
+                                        color: $color-text-1;
+                                    }
+                                    span{
+                                        margin: 0;
+                                        padding: 0;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-size: .75rem;
+                                        color: $color-text-3;
+                                    }
+                                }                        
+                            }
+                            .rol{
+                                .textName{
+                                    p{
+                                        margin: 0;
+                                        padding: 0;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-size: 1rem;
+                                        color: $color-text-1;
+                                    }
+                                    span{
+                                        margin: 0;
+                                        padding: 0;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-size: .75rem;
+                                        color: $color-text-3;
+                                    }
+                                }
+                            }
+                            .sueldo{
+                                .textName{
+                                    p{
+                                        margin: 0;
+                                        padding: 0;
+                                        font-family: 'Open Sans', sans-serif;
+                                        font-size: 1rem;
+                                        color: $color-text-1;
+                                    }
+                                }
+                            }
+                            .btnEditar{
+                                input{
+                                    padding: 10px 20px;
+                                    color: $color-text-8;
+                                    background-color: $bg-6;
+                                    border-style: none;
+                                    border-radius:5px;
+                                }
+                                input:hover{
+                                    cursor: pointer;
+                                    background-color: $bg-5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .formEmpleado{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                p{
+                    margin: 1.25rem;
+                    color: $color-text-6;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 1.875rem;
+                }
+                .InputsGroup{
+                    display: flex;
+                    .InputsForm{
+                        width: 18.75rem;
+                        height: 2.5rem;
+                        margin: .625rem;
+                        padding: .125rem .625rem;
+                        border-radius: .3125rem;
+                        border: 0.5px solid $bg-3;
+                        outline: none;
+                    }
+                }
+                .FormSelect{
+                    margin: .625rem;
                     width: 18.75rem;
                     height: 2.5rem;
                     padding: .125rem .625rem;
                     border-radius: .3125rem;
-                    border-style: none;
-                }
-            }
-            .FormSelect{
-                margin: .625rem;
-                width: 18.75rem;
-                height: 2.5rem;
-                padding: .125rem .625rem;
-                border-radius: .3125rem;
-                border-style: none;
-                option{
-                    font-family: 'Open Sans', sans-serif;
-                    font-size: .875rem;
-                }
-            }
-            .contenedorGeo {
-                width: 100%;
-                z-index: 0;
-                .contenedorSearch {
-                    display: flex!important;
-                    justify-content: center;
-                    align-items: center;
-                    margin: .625rem;
-                    img{
-                        width: .9375rem;
-                        height: 1.25rem;
-                        margin-left: 280px;
-                        padding: 12px;
-                        position: absolute;        
-                        border-top-right-radius: 5px;
-                        border-bottom-right-radius: 5px;
-                    }
-                    img:hover{
-                        cursor: pointer;
-                    }
-                    .search {
-                        width: 18.75rem;
-                        height: 2.5rem;
-                        padding: .125rem .625rem;
-                        border-radius: .3125rem;
-                        border-style: none;
+                    option{
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: .875rem;
                     }
                 }
-                .contenedorResultados {
-                    .list-group{
-                        width: 50%;
-                        margin:auto;
-                        border-bottom-left-radius: 5px;
-                        border-bottom-right-radius: 5px;
-                        background-color: #E5E7E9;
-                    }
-                    .list-group-item {
-                        margin: 0rem 0rem .3125rem .625rem;
-                        font-family: arial;
-                        color: blue;
-                        text-decoration: underline;
-                        cursor: pointer;
-                        list-style: none;
-                        border-radius: .125rem;
-                        line-height: 1.125rem;
-                        letter-spacing: .0625rem;
-                        padding: .3125rem;
-                    }                    
-                    .list-group-item:hover {
-                        text-decoration: none;
-                    }
-                    .active{
-                        color:red;
-                    }
-                    .map{
-                        display: flex;
+                .contenedorGeo {
+                    width: 100%;
+                    z-index: 0;
+                    .contenedorSearch {
+                        display: flex!important;
                         justify-content: center;
                         align-items: center;
+                        margin: .625rem;
+                        img{
+                            width: .9375rem;
+                            height: 1.25rem;
+                            margin-left: 17.5rem;
+                            padding: .75rem;
+                            position: absolute;        
+                            border-top-right-radius: .3125rem;
+                            border-bottom-right-radius: .3125rem;
+                        }
+                        img:hover{
+                            cursor: pointer;
+                        }
+                        .search {
+                            width: 18.75rem;
+                            height: 2.5rem;
+                            padding: .125rem .625rem;
+                            border-radius: .3125rem;
+                            border: 0.5px solid $bg-3;
+                            outline: none;
+                        }
                     }
-                    #map-container{
-                        width: 70%;
-                        height: 50vh;
-                    }
-                    .displayNone{
-                        display: none;
-                    }
-                    .displayContent{
-                        display: block;
-                    }
-                }                  
-            }
-              
-            .BtnEmpleados{
-                margin: 1.25rem;
-                padding: .625rem 1.25rem;
-                color: $color-text-8;
-                background-color: $bg-1;
-                border-style: none;
-                border-radius: 5px;
-                font-family: 'Tajawal', sans-serif;
-                font-size: 1rem;
-            }
-            .BtnEmpleados:hover{
-                cursor: pointer;
-                background-color: $bg-2;
-            }
-        }
-        p{
-            margin: 3.125rem 0rem;
-            color: $color-text-3;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.875rem;
-        }
-        .TableEmpleados{
-            width: 80%;
-            margin-bottom: 80px;
-            border-collapse: collapse;
-            border: 1px solid $bg-8;
-            thead{
-                th{
-                    font-family: 'Tajawal', sans-serif;
-                    font-size: 1.125rem;
-                    color: $color-text-8;
-                    background-color: $bg-1;
-                    padding: .3125rem;
-                    border: 1px solid $bg-8;
+                    .contenedorResultados {
+                        .list-group{
+                            width: 50%;
+                            margin:auto;
+                            border-bottom-left-radius: .3125rem;
+                            border-bottom-right-radius: .3125rem;
+                            background-color: #E5E7E9;
+                        }
+                        .list-group-item {
+                            margin: 0rem 0rem .3125rem .625rem;
+                            font-family: arial;
+                            color: blue;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            list-style: none;
+                            border-radius: .125rem;
+                            line-height: 1.125rem;
+                            letter-spacing: .0625rem;
+                            padding: .3125rem;
+                        }                    
+                        .list-group-item:hover {
+                            text-decoration: none;
+                        }
+                        .active{
+                            color:red;
+                        }
+                        .map{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        #map-container{
+                            width: 45%;
+                            height: 50vh;
+                            box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+                        }
+                        .displayNone{
+                            display: none;
+                        }
+                        .displayContent{
+                            display: block;
+                        }
+                    }                  
                 }
-            }
-            tbody{
-                td{
-                    padding: .3125rem;
-                    font-family: 'Tajawal', sans-serif;
-                    font-size: 1.125rem;
-                    text-align: center;
+                  
+                .BtnEmpleados{
+                    margin: 1.25rem;
+                    padding: .3125rem 1.25rem;
                     color: $color-text-8;
-                    background-color: $bg-3;
-                    border: 1px solid $bg-8;
-                    .editar{
-                        color: green;
-                    }
-                    .eliminar{
-                        color: red;
-                    }
+                    background-color: $bg-6;
+                    border-style: none;
+                    border-radius: .3125rem;
+                    font-family: 'Tajawal', sans-serif;
+                    font-size: 1rem;
+                }
+                .BtnEmpleados:hover{
+                    cursor: pointer;
+                    background-color: $bg-5;
                 }
             }
         }
     }
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-  }
-  
-  .contenedorHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: cadetblue;
-  }
-  
-  .logo h1 {
-    font-family: arial;
-    font-size: 25px;
-    color: white;
-  }
-  
-  nav ul li {
-    font-family: arial;
-    list-style: none;
-    color: white;
-  }
-  

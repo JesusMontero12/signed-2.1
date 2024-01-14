@@ -1,0 +1,80 @@
+main{
+    .content{
+        .containerConfig{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1.25rem;
+            padding: 1.25rem 3.125rem 3.125rem 3.125rem;
+            border-radius: 10px;
+            background-color: $bg-8;
+            box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+            hr{
+                margin: 15px;
+                width: 100%;
+                border: 0.2px solid $bg-6;
+            }
+            .headerConfiguracion{
+                width: 90%;
+                margin: .625rem;
+                padding: .3125rem;    
+                h2{
+                    text-align: center;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 1.875rem;
+                    color: $color-text-6;
+                }            
+            }            
+            .containerCardsConfig{
+                width: 100%;                
+                border-radius: 10px;
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+                .cardsConfig{
+                    overflow: hidden;
+                    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+                    .btnDesplegarConfig{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;                        
+                        h3{
+                            margin: .3125rem;
+                            padding: .3125rem;
+                            font-family: 'Open Sans', sans-serif;
+                            font-size: .9375rem;
+                            color: $color-text-1;
+                        }
+                        .listArrow{
+                            width: 1.5625rem;
+                            height: 1.5625rem;
+                            transition: transform .3s;
+                        }
+                    }
+                    .btnDesplegarConfig:hover{
+                        cursor: pointer;
+                        background-color: $bg-4;
+                        border-radius: 5px;
+                    }
+                    .ventanaDesplegar{
+                        height: 0;
+                        transition: height .4s;
+                        background-color: $bg-4;
+                        ul{
+                            padding: 10px 20px;
+                            li{
+                                padding: 5px;
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: .9375rem;
+                                list-style: none;
+                            }
+                        }
+                    }
+                    .arrow .listArrow{
+                        transform: rotate(90deg);                            
+                    }
+                }
+            }
+        }
+    }
+}

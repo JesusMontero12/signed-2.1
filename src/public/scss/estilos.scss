@@ -15,9 +15,13 @@
 @import "./layouts/registro-empresa";
 @import "./layouts/login";
 @import "./layouts/dashboard-header";
+@import "./layouts/_dashboard-tabs.scss";
 @import "./layouts/_dashboard-main-empleados.scss";
 @import "./layouts/_dashboard-main-firmas.scss";
-@import "./layouts/_dashboard-tabs.scss";
+@import "./layouts/_dashboard-main-nominas.scss";
+@import "./layouts/dashboard-main-informes.scss";
+@import "./layouts/dashboard-main-config";
+
 
 /*------Enlaces Responsive Carpeta layout/media-----*/
 /*Media Query de 1024px(laptos)*/
